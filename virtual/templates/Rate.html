@@ -1,0 +1,343 @@
+{% load static%}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+	  <meta name="keywords" content="web design, affordable web design, professional web design">
+  	<meta name="author" content="Brad Traversy">
+    <title>Virtual Writer Kings | Welcome</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  body{
+font:18px/1.5 arial, Helvetica, Sans-serif;
+padding: 0;
+margin: 0;
+background-color: #E7E1E6;
+}
+
+nav{
+  background: #35424a;
+}
+nav ul li a{
+  color: white;
+  line-height: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  
+}
+
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+  list-style: none;
+  position: 4px;
+}
+
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: #35424a;
+  margin: 0 1px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+/*----Global----*/
+
+.container{
+width: 100%;
+margin: 0;
+overflow: hidden;
+}
+.terms{
+width: 80%;
+margin: 0;
+overflow: hidden;
+}
+
+/*----Header----*/
+header{
+background: #35424a;
+color: #ffffff;
+padding-top: 30px;
+min-height: 50px;
+border-bottom: #e8491d 3px solid;
+}
+
+/*----header a----*/
+header a{
+color: white;
+text-decoration:none;
+font-size: 16px;
+}
+
+
+header li{
+float:left;
+display: inline;
+padding: 0 20px 0 20px;
+}
+
+header #branding{
+float: left;
+}
+header #branding h1{
+margin: 0;
+font-family: Lucida Calligraphy;
+}
+
+header nav{
+float: right;
+margin-top: 10px;
+}
+
+header .hightlight, header .current a{
+color: #e8491d;}
+
+header a:hover{
+color: blue;
+fort-weight: bold;
+}
+
+/* Header **/
+header{
+  background:#35424a;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#e8491d 3px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: none;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:blue;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+
+/*---Boxes--*/
+
+.container{
+width: 100%;
+margin: 0;
+overflow: hidden;
+}
+
+.center{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center .stars{
+  height: 150px;
+  width: 500px;
+  text-align: center;
+}
+.stars input{
+  display: none;
+}
+.stars label{
+  float: right;
+  font-size: 100px;
+  color: lightgrey;
+  margin: 0 5px;
+  text-shadow: 1px 1px #bbb;
+}
+.stars label:before{
+  content: '★';
+}
+.stars input:checked ~ label{
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label{
+  color: gold;
+}
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label{
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.stars .result:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 50%;
+  transform: translateX(-47%);
+  bottom: -30px;
+  font-size: 30px;
+  font-weight: 500;
+  color: gold;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+}
+.stars input:checked ~ .result:before{
+  display: block;
+}
+.stars #five:checked ~ .result:before{
+  content: "Amazing 😍";
+}
+.stars #four:checked ~ .result:before{
+  content: "Good😎";
+}
+.stars #three:checked ~ .result:before{
+  content: "Fair 😄";
+}
+.stars #two:checked ~ .result:before{
+  content: "Bad 😒";
+}
+.stars #one:checked ~ .result:before{
+  content: "Poor 😠";
+}
+	</style>
+  <header>
+  <div class= "container">
+    <div id="branding">
+      <h1><span class="highlight">Vertual</span> Writer Kings</h1>
+    </div>
+    
+    <nav>
+    <ul>
+    <li class="current"><a href="accounts/home">Home</a></li>
+    <li><a href="accounts/about">About Us</a>
+    <ul>
+    <li><a href="accounts/grading">Our Grades</a></li>
+    <li><a href="accounts/services"> Services</a></li>
+    <li><a href="accounts/contact"> Talk to Us</a></li>
+    
+    </ul>
+    </li>
+    <li><a href="accounts/terms">Terms</a></li>
+    <li><a href="accounts/contact">Contact Us</a>
+    <ul>
+    <li><a href="accounts/contact">Email</a></li>
+    <li><a href="accounts/contact"> Call</a></li>
+    <li><a href="accounts/contact"> Whatsapp</a></li>
+     <li><a href="accounts/contact"> Chat</a></li>
+    
+    </ul>
+    </li>
+    <li><a href="accounts/order">Order</a>
+    <ul>
+    <li><a href="accounts/rate">Rate Us</a></li>
+    </ul>
+    </li>
+   
+    <li><a href="accounts/register">Register</a></li>
+    <li><a href="accounts/login">Login</a></li>
+   
+    </ul>
+    </nav>
+    </div>
+  </header>
+
+  </head>
+  <body>
+    <div class="center">
+      <div class="stars">
+        <input type="radio" id="five" name="rate" value="5">
+        <label for="five"></label>
+        <input type="radio" id="four" name="rate" value="4">
+        <label for="four"></label>
+        <input type="radio" id="three" name="rate" value="3">
+        <label for="three"></label>
+        <input type="radio" id="two" name="rate" value="2">
+        <label for="two"></label>
+        <input type="radio" id="one" name="rate" value="1">
+        <label for="one"></label>
+        <span class="result"></span>
+      </div>
+</div>
+
+<h1 style="Text-align: center";Please Rate Our Services</h1>
+  
+
+</body>
+</html>

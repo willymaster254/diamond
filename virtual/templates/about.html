@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+	
+  
+ {% block body %} 
+ <heade>
+   <style>
+    .btn.btn-success{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    /* font-style: italic; */
+    width: 50%;
+    text-justify: auto;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+    
+    
+ 
+    </style>
+ </heade>
+ 
+  <!--  ======================= Start Banner Area =======================  -->
+  <section class="site-banner">
+    <div class="container">
+        <div class="row"data-aos="fade-left" data-aos-delay="200">
+            <div class="col-lg-6 col-md-12 site-title">
+                <h3 class="title-text"data-aos="fade-left" data-aos-delay="200">Hey...</h3>
+                <h1>Welcome To Virtual Writer Kings</h1>
+                <h4>Academic Zone Number 1</h4>
+                <div class="site-buttons">
+                    <div class="d-flex flex-row flex-wrap"data-aos="fade-left" data-aos-delay="200">
+                        <button type="button" class="btn btn-primary btn-lg"><a href="/orders/"><span style="color: white",>Order Now!</span></a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 banner-image"data-aos="zoom-in" data-aos-delay="200">
+            <div class="zoomin">
+              <img src="{% static 'images/hat.jpg' %}"  alt="banner-img" class="img-fluid">
+            </div>
+            </div>
+        </div>
+    
+          
+    <!--  ========================= About Area ==========================  -->
+
+    <section class="about-area">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-6 col-md-12">
+                  <div class="about-image">
+                <div class="zoomout">
+                    <img src="{% static 'images/browse.png' %}"  alt="banner-img" class="img-fluid">
+                </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-12 about-title">
+                  <h2 >
+                      About Us
+                  </h2>
+                  <div class="paragraph py-4 w-75">
+                      <p class="para"data-aos="fade-left" data-aos-delay="200">
+                        Hello, welcome to Virtual Writer Kings. Be assured to interact with a professional team who will be taking care of your academic issues. 
+                        Our pride is based on holding a good number of writing experience in the academic field.</p>
+                     
+                      <p class="para"data-aos="fade-right" data-aos-delay="200">
+                  
+                          Allow us confess that our essay writing professionalism is based on belief in a good customer relation through proper communication,
+                          following every single customer's instructions on the assigned orders, practicing due diligence, giving a fresh perspective to every paper that we work on, and not forgetting that customer satisfaction must be given first priority.</p> 
+                          
+                          <a href="/order/" class="btn btn-full">Order Now!</a>
+                      </p>
+                  </div>
+               
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!--  ========================= End About Area ==========================  -->
+
+
+    <!-- Two Column Section -->
+    <aside class="sidebar">
+        <div class="category">
+            <h2>Services Offered</h2>
+            <ul class="category-list">
+                <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Thesis Writing</h3></span></a></button>
+                    <!-- <span>(01)</span> -->
+                    <br>
+                    <br>
+                    <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                        <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Computer Programming</h3></span></a></button>
+                        <!-- <span>(02)</span> -->
+                    </li>
+                    <br>
+                </li>
+                <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Essays</h3></span></a></button>
+                    <!-- <span>(02)</span> -->
+                </li>
+                <br>
+                <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Statistical Analysis </h3></span></a></button>
+                    <!-- <span>(03)</span> -->
+                </li>
+                <br>
+                <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Web Desining</h3></span></a></button>
+                    <!-- <span>(04)</span> -->
+                </li>
+                <br>
+                <li class="list-items" data-aos="fade-left" data-aos-delay="600">
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Technical calculations </h3></span></a></button>
+                    <!-- <span>(5)</span> -->
+
+                </li>
+                <br>
+                    <li class="list-items" data-aos="fade-left" data-aos-delay="700">
+                    
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Online Classes</h3></span></a></button>
+                </li>
+                <br>
+                <li class="list-items" data-aos="fade-left" data-aos-delay="800">
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Database Management </h3></span></a></button>
+                    <!-- <span>(5)</span> -->
+                
+                </li>
+                <br>
+                <li class="list-items" data-aos="fade-left" data-aos-delay="900">
+                    <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Software Engineering </h3></span></a></button>
+                    <!-- <span>(5)</span> -->
+
+                </li>
+            </ul>
+        </aside>
+        </div>
+    
+{% endblock body %}

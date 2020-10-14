@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Writer Kings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png ' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png ' %}">
+
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css'%} " rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'css/style.min.css' %} " rel="stylesheet">
+
+    <style>
+        body {
+    color: #ffffff;
+    background-color: #1f2735;
+        }   
+
+    .ant-card {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fafafd;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    background: #273142;
+    border-radius: 4px;
+    transition: all .3s;
+    }  
+
+    .size{
+        width:70%
+    }  
+
+    .gender{
+        width: 20%;
+    }
+    </style>
+   
+</head>
+<body>
+    <main class=" container-fluid row">
+        <!-- column one  -->
+        <div class="col-lg-2 "> 
+
+            <a href="/" >  </a>
+
+        </div>
+        <!-- column one  -->
+
+
+        <!-- column two  -->
+        <div class="col-lg-8"> 
+            <div class=" ">
+
+                <h1 class="text-center"><strong> Tutor Sign_Up</strong></h1>
+                <h2 class="text-center"><i>Create Your and Start Earning</i></h2>
+                <div class="ant-card px-3 py-4">
+                    <form action="" method="POST" enctype="multipart/form-data">
+        
+                    {% csrf_token %}
+                 
+                    <div class="row">
+                        <div class="form-group col-lg-6 col-md-12">
+                            {{form.first_name|as_crispy_field}}
+        
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                            {{form.second_name|as_crispy_field}}
+        
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                            {{form.specialization|as_crispy_field}}
+        
+                        </div>
+        
+                    </div>
+                    <div class="size">
+                     
+                    </div>
+                    
+                    {{form.email|as_crispy_field}}
+                
+        
+                    <div class="row">
+                        <div class="col-md-2">
+                            
+                            {{form.country_code|as_crispy_field}}
+        
+        
+        
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                            
+                            {{form.phone_number|as_crispy_field}}
+                           
+                        </div>
+                    
+        
+                    </div>
+                    <div class="gender">
+                    {{form.gender|as_crispy_field}}
+                   </div>
+                    <div class="row">
+                        <div class="form-group col-lg-6 col-md-12">
+                            {{form.sample_essay|as_crispy_field}}
+        
+                        </div>
+                        <div class="form-group col-lg-6 col-md-12">
+                            {{form.selfie|as_crispy_field}}
+        
+                        </div>
+                      <div class="form-group col-lg-6 col-md-12">
+                                <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>
+                                    Submit</button>
+        
+                    </div>
+                  
+                        </div>
+                    </div>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+        </form>
+        <!-- column two  -->
+
+            <!-- column three  -->
+        <div class="col-lg-2">
+            
+        </div>
+        <!-- column three  -->
+
+    </main>
+
+
+
+
+
+
+   
+</body>
+</html>

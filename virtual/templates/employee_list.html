@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-10 offset-md-1 mt-5">
+        <div class="jumbotron">
+            <h1 class="display-2">Employee Register</h1>
+            <p class="lead font-italic">Python Django project for implementing CRUD operations</p>
+            <hr class="my-4">
+            <table class="table table-borderless">
+                <thead class="border-bottom font-weight-bold">
+                    <tr>
+                        <td>Full Name</td>
+                        <td>Mobile</td>
+                        <td>Position</td>
+                        <td></td>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for employee in employee_list %}
+                        <tr>
+                            <td>{{employee.fullname}}</td>
+                            <td>{{employee.mobile}}</td>
+                            <td>{{employee.position}}</td>
+                            <td> <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0">
+                                <i class="far fa-edit fa-lg"></i>
+                            </a></td>
+                         </tr>  
+                    {% endfor %}
+                </tbody>
+            </table>   
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Writer Kings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png ' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png ' %}">
+
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css'%} " rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'css/style.min.css' %} " rel="stylesheet">
+
+    <style>
+        body {
+    color: #ffffff;
+    background-color: #1f2735;
+        }   
+
+    .ant-card {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fafafd;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    background: #273142;
+    border-radius: 4px;
+    transition: all .3s;
+    }    
+    </style>
+   
+</head>
+<body>
+    <main class=" container-fluid row">
+        <!-- column one  -->
+        <div class="col-lg-2 "> 
+
+            <a href="/accounts/order/" >  </a>
+
+        </div>
+        <!-- column one  -->
+
+
+        <!-- column two  -->
+        <div class="col-lg-8"> 
+            <div class=" ">
+
+                <h1 class="text-center"><strong> Create a <span style="color: orange;">New </span> Order </strong></h1>
+                <div class="ant-card px-3 py-4">
+                    <form action="" method="POST" enctype="multipart/form-data">
+        
+                    {% csrf_token %}
+                 
+                    <form class="needs-validation" novalidate>
+                      <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                          <label for="validationTooltip01">First name</label>
+                          <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="" required>
+                          <div class="valid-tooltip">
+                            Looks good!
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label for="validationTooltip02">Last name</label>
+                          <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="" required>
+                          <div class="valid-tooltip">
+                            Looks good!
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label for="validationTooltipUsername">Username</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                            <div class="invalid-tooltip">
+                              Please choose a unique and valid username.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4">Email</label>
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                       
+                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                       
+                        <div class="form-group row">
+                          <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                          </div>
+                        </div>
+                    
+                        <div class="form-group row">
+                          <label for="inputPassword" class="col-sm-3 col-form-label">Confirm Password</label>
+                          <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                          </div>
+                        </div>
+                      </div>
+                        
+                      <fieldset class="form-group">
+                        <div class="row">
+                          <legend class="col-form-label col-sm-1 pt-0">Gender</legend>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                              <label class="form-check-label" for="gridRadios1">
+                                Male
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                              <label class="form-check-label" for="gridRadios2">
+                                Female
+                              </label>
+                            </div>
+                            <!-- <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                              <label class="form-check-label" for="gridRadios2">
+                                Other
+                              </label>
+                            </div> -->
+                          </div>
+                        </div>
+                      <!-- <div class="col-sm-4">
+                      <label for="validationTooltip02">Gender</label>
+                      <div class="form-check form-check-inline">
+                        &nbsp; &nbsp;
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Male">
+                        <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Female">
+                        <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                      </div>
+                      </div> -->
+                      
+                    
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label for="validationTooltip03">City</label>
+                          <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                          <div class="invalid-tooltip">
+                            Please provide a valid city.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label for="validationTooltip04">State</label>
+                          <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                          <div class="invalid-tooltip">
+                            Please provide a valid state.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label for="validationTooltip05">State Code</label>
+                          <input type="text" class="form-control" id="validationTooltip05" placeholder="State Code" required>
+                          <div class="invalid-tooltip">
+                            Please provide a valid zip.
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <select class="custom-select">
+                        <option selected>Select Your Native Language</option>
+                        <option value="Afrikaans">Afrikaans</option>
+                      <option value="Albanian">Albanian</option>
+                      <option value="Arabic">Arabic</option>
+                      <option value="Armenian">Armenian</option>
+                      <option value="Basque">Basque</option>
+                      <option value="Bengali">Bengali</option>
+                      <option value="Bulgarian">Bulgarian</option>
+                      <option value="Catalan">Catalan</option>
+                      <option value="Cambodian">Cambodian</option>
+                      <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                      <option value="Croatian">Croatian</option>
+                      <option value="Czech">Czech</option>
+                      <option value="Danish">Danish</option>
+                      <option value="Dutch">Dutch</option>
+                      <option value="English">British English</option>
+                      <option value="English">American English</option>
+                      <option value="Estonian">Estonian</option>
+                      <option value="Fiji">Fiji</option>
+                      <option value="Finnish">Finnish</option>
+                      <option value="French">French</option>
+                      <option value="Georgian">Georgian</option>
+                      <option value="German">German</option>
+                      <option value="Greek">Greek</option>
+                      <option value="Gujarati">Gujarati</option>
+                      <option value="Hebrew">Hebrew</option>
+                      <option value="Hindi">Hindi</option>
+                      <option value="Hungarian">Hungarian</option>
+                      <option value="Icelandic">Icelandic</option>
+                      <option value="Indonesian">Indonesian</option>
+                      <option value="Irish">Irish</option>
+                      <option value="Italian">Italian</option>
+                      <option value="Japanese">Japanese</option>
+                      <option value="Javanese">Javanese</option>
+                      <option value="Korean">Korean</option>
+                      <option value="Latin">Latin</option>
+                      <option value="Latvian">Latvian</option>
+                      <option value="Lithuanian">Lithuanian</option>
+                      <option value="Macedonian">Macedonian</option>
+                      <option value="Malay">Malay</option>
+                      <option value="Malayalam">Malayalam</option>
+                      <option value="Maltese">Maltese</option>
+                      <option value="Maori">Maori</option>
+                      <option value="Marathi">Marathi</option>
+                      <option value="Mongolian">Mongolian</option>
+                      <option value="Nepali">Nepali</option>
+                      <option value="Norwegian">Norwegian</option>
+                      <option value="Persian">Persian</option>
+                      <option value="Polish">Polish</option>
+                      <option value="Portuguese">Portuguese</option>
+                      <option value="Punjabi">Punjabi</option>
+                      <option value="Quechua">Quechua</option>
+                      <option value="Romanian">Romanian</option>
+                      <option value="Russian">Russian</option>
+                      <option value="Samoan">Samoan</option>
+                      <option value="Serbian">Serbian</option>
+                      <option value="Slovak">Slovak</option>
+                      <option value="Slovenian">Slovenian</option>
+                      <option value="Spanish">Spanish</option>
+                      <option value="Swahili">Swahili</option>
+                      <option value="Swedish ">Swedish </option>
+                      <option value="Tamil">Tamil</option>
+                      <option value="Tatar">Tatar</option>
+                      <option value="Telugu">Telugu</option>
+                      <option value="Thai">Thai</option>
+                      <option value="Tibetan">Tibetan</option>
+                      <option value="Tonga">Tonga</option>
+                      <option value="Turkish">Turkish</option>
+                      <option value="Ukrainian">Ukrainian</option>
+                      <option value="Urdu">Urdu</option>
+                      <option value="Uzbek">Uzbek</option>
+                      <option value="Vietnamese">Vietnamese</option>
+                      <option value="Welsh">Welsh</option>
+                      <option value="Xhosa">Xhosa</option>
+                      </select>
+                      <br>
+                      <br>
+                      <br>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Please Upload a 1 Page Sample Essay</label>
+                      </div>
+                      <br>
+                      <br>
+                      <br>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Agree to Terms $ Condtions</label>
+                      </div>
+                      <br>
+                      <br>
+                    </div>
+                    <div class="container">
+                    <button type="submit" class="btn btn-primary">Submit</button></div>
+                    </form>
+                    
+        <!-- column two  -->
+
+            <!-- column three  -->
+        <div class="col-lg-2">
+            
+        </div>
+        <!-- column three  -->
+
+    </main>
+
+
+
+
+
+
+   
+</body>
+</html>

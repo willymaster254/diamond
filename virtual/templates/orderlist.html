@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Writer Kings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png ' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png ' %}">
+
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css'%} " rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'css/style.min.css' %} " rel="stylesheet">
+
+    <style>
+        body {
+    color: #ffffff;
+    background-color: black;
+        }   
+
+    .ant-card {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fafafd;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    background: #273142;
+    border-radius: 4px;
+    transition: all .3s;
+    }    
+    </style>
+   
+</head>
+<body>
+    <main class=" container-fluid row">
+        <!-- column one  -->
+        <div class="col-lg-2 "> 
+
+            <a href="/accounts/order/" >  </a>
+
+        </div>
+        <!-- column one  -->
+        <div class="col-lg-2">
+            <h2>Orders</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Pages</th>
+                        <th>Style</th>
+                        <th>Subject</th>
+                        <th>Amount</th>
+                        <th>upload</th>
+                        <th>Instructions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for orders in orders %}
+                        <tr>
+                            <td>{{ order.topic }}</td>
+                            <td>{{ order.pages }}</td>
+                            <td>{{ order.style }}</td>
+                            <td>{{ order.subject }}</td>
+                            <td>{{ order.amount }}</td>
+                            <td>{{ order.upload }}</td>
+                            <td>{{ order.instructions }}</td>
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+            </table>
+            
+        </div>
+
+
+
+            <!-- column three  -->
+        <div class="col-lg-2">
+            
+        </div>
+        <!-- column three  --
+    </main>
+
+
+
+
+
+
+   
+</body>
+</html>
