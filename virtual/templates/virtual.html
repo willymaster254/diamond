@@ -242,7 +242,7 @@ position: sticky;
 }
 
 #confidence{
-background:url({% static 'images/confidence.jpg' %}) no-repeat;
+background:url({% static 'images/confidence.jpg' %}) no-repeat center center fixed;
 background-size: cover;
 min-height: 400px;
 color: white;
@@ -307,7 +307,64 @@ site-slider.slider-btn.next{
   padding-left: 15%;
 }
 
+.btn.btn-success{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    /* font-style: italic; */
+    width: 99%;
+    text-justify: auto;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
 
+
+.d-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 100px;
+        grid-gap: 7px;
+      }
+
+      .item {
+        position: relative;
+      }
+
+      .item:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+      }
+
+      .item:nth-child(2) {
+        grid-column: 2;
+        grid-row: 0 / 3;
+      }
+
+      .item:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2 / 3;
+      }
+
+      .item:nth-child(4) {
+        grid-column: 2;
+        grid-row: 3 / 3;
+      }
+
+      .item a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        overflow: hidden;
+      }
+
+      .item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
 /* media qquarries */
 
    </style>
@@ -418,6 +475,7 @@ site-slider.slider-btn.next{
 <hr class="my-4">
 </div>
 
+
 <!-- Two Column Section -->
 <div class="container-fluid padding">
   <div class="row text-center padding" data-aos="zoom-in" data-aos-delay="200">
@@ -425,7 +483,7 @@ site-slider.slider-btn.next{
       <h2>If You Assign Us...</h2>
       <p>We offer solutions to all your writing requirements. Our services are exquisite and exemplary, simply unparalleled. You will receive customized original papers of the finest quality every time you entrust us with your assignment. We have lots to offer, so navigate our site to gain familiarity with the perks you gain ranging from writing services, exemplary and original quality, unemployed professors, and guarantees.</p>
     <br>
-    <a href="#" class="btn btn-primary">Learn More</a>
+    <a href="/accounts/about/" class="btn btn-primary">Learn More</a>
 
     </div>
     <div class="col-lg-6">
@@ -445,7 +503,7 @@ site-slider.slider-btn.next{
 </figure>
 
 <!-- Emoji -->
-<button type="button" class="btn btn-primary btn-lg"><a href="/accounts/tregistration"><span style="color: white",>Become a Tutor</span></a></button>
+<!-- <button type="button" class="btn btn-secondary btn-lg"><a href="/accounts/tregistration"><span style="color: white",>Cheapest Payment Platforms</span></a></button> -->
 <div id="emoji" class="collapse">
   <div class="container-fluid padding">
     <!-- <div class="row text-center"> -->
@@ -457,24 +515,27 @@ site-slider.slider-btn.next{
     </div>
   </div>
 </div>
+
+
 <!-- Payments -->
 <section class="section-4">
   <div class="container text-center" data-aos="fade-left" data-aos-delay="200">
     <h1 class="text-dark">Payment Methods</h1>
     <p class="text-secondary">Simple and Trasparent Transactions</p>
   </div>
+  <div class="container">
   <div class="team row " data-aos="fade-left" data-aos-delay="200">
     <div class="col-md-4 col-12 text-center">
-        <div class="card mr-2 d-inline-block shadow-lg">
+      <div class="card mb-4 border-0">
             <div class="card-img-top"data-aos="fade-left" data-aos-delay="200">
               <div class="zoomin">
-              <img src="{% static 'images/applepay.png'%}" class="img-fluid border-radius p-4" alt="">
+              <img src="{% static 'images/apple3.png'%}" class="img-fluid border-radius p-4" alt="" style="height: 150px;">
               </div>
             </div>
             <div class="card-body" data-aos="fade-left" data-aos-delay="200">
-              <h3 class="card-title"data-aos="fade-left" data-aos-delay="200">Why ApplePay</h3>
+              <h3 class="card-title"data-aos="fade-left" data-aos-delay="200"></h3>
               <p class="card-text"data-aos="fade-left" data-aos-delay="200">
-                Apple Pay help boost conversions on sales as it promotes a more secure way of keeping and spending funds.With Apple Watch, consumers are able to make instant payment at their convenience.</br>
+                <!-- Apple Pay help boost conversions on sales as it promotes a more secure way of keeping and spending funds.With Apple Watch, consumers are able to make instant payment.</br> -->
                 <a href="#">Apple Pay No: 254729503931</a>
               </p>
               <button type="button" class="btn btn-primary btn-lg"><a href="/orders/"><span style="color: white",>Order Now!</span></a></button>
@@ -487,18 +548,18 @@ site-slider.slider-btn.next{
         <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
             <div class="carousel-inner text-center">
               <div class="carousel-item active">
-                <div class="card mr-2 d-inline-block shadow">
+                <div class="card mb-4 border-0">
                   <div class="card-img-top" data-aos="fade-left" data-aos-delay="200">
                     <div class="zoomin">
-                    <img src="{% static 'images/paypal.jpg'%}" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      <img src="{% static 'images/paypal2.png'%}" class="img-fluid border-radius p-4" alt="" style="height: 150px;">
                     </div>
                   </div>
                   <div class="card-body" data-aos="fade-left" data-aos-delay="200">
                     
-                    <br>
-                    <h3 class="card-title"data-aos="fade-left" data-aos-delay="200">Why PayPal</h3>
+                  
+                    <h3 class="card-title"data-aos="fade-left" data-aos-delay="200"></h3>
                     <p class="card-text"data-aos="fade-left" data-aos-delay="200">
-                      Cheaper method of payment. It is also available when needed. Payoneer has fair charges as compared to paypal. Also, creating an account with paypal has few legal procedures.</br>
+                      <!-- Cheaper method of payment. It is also available when needed. Payoneer has fair charges as compared to paypal. Also, creating an account with paypal has few legal procedures.</br> -->
                         <b>Papal account email:</b><a href="contacts"> virtualwriterkings@gmail.com</a>
                     <!-- </p>
                     <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
@@ -508,24 +569,24 @@ site-slider.slider-btn.next{
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="card  d-inline-block mr-2 shadow">
+                <div class="card mb-4 border-0">
                   <div class="card-img-top"data-aos="fade-left" data-aos-delay="200">
                     <div class="zoomin">
-                    <img src="{% static 'images/paypal.jpg'%}" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      <img src="{% static 'images/paypal2.png'%}" class="img-fluid border-radius p-4" alt="" style="height: 130px;">
                   </div>
                   </div>
                   <div class="card-body">
                     
-                    <br>
-                    <h3 class="card-title" data-aos="fade-left" data-aos-delay="200">Why PayPal</h3>
+                  
+                    <h3 class="card-title" data-aos="fade-left" data-aos-delay="200"></h3>
                     <p class="card-text"data-aos="fade-left" data-aos-delay="200">
-                      Cheaper method of payment. It is also available when needed. Payoneer has fair charges as compared to paypal. Also, creating an account with paypal has few legal procedures.</br>
+                      <!-- Cheaper method of payment. It is also available when needed. Payoneer has fair charges as compared to paypal. Also, creating an account with paypal has few legal procedures.</br> -->
                       <b>Papal account email:</b><a href="contacts"> virtualwriterkings@gmail.com</a>
                     </p>
                     <button type="button" class="btn btn-primary btn-lg"><a href="/orders/"><span style="color: white",>Order Now!</span></a></button>
                     <!-- <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
                     <p class="text-black-50">CEO at Google</p> -->
-                    
+                  
                   </div>
                 </div>
               </div>
@@ -533,17 +594,18 @@ site-slider.slider-btn.next{
     </div>
     </div>
     <div class="col-md-4 col-12 text-center">
-        <div class="card mr-2 d-inline-block shadow-lg">
+      <div class="card mb-4 border-0">
             <div class="card-img-top" data-aos="fade-right" data-aos-delay="200">
               <div class="zoomin">
-              <img src="{% static 'images/payoneer.jpg'%}" class="img-fluid border-radius p-4" alt="">
+                <img src="{% static 'images/payoneer.jpg'%}" class="img-fluid border-radius p-4" alt="" style="height: 120px;">
               </div>
             </div>
-            <br>
+            
             <div class="card-body"data-aos="fade-left" data-aos-delay="200">
-              <h3 class="card-title"data-aos="fade-right" data-aos-delay="200">Why Payoneer</h3>
+              <h3 class="card-title"data-aos="fade-right" data-aos-delay="200"></h3>
               <p class="card-text"data-aos="fade-right" data-aos-delay="200">
-                 Cheaper method of payment. It is also available when needed. Payoneer has fair charges as compared to paypal.</br><b>Payoneer account email:</b><a href="payments"> virtualwriterkings@gmail.com</a>
+                 <!-- Cheaper method of payment. It is also available when needed. Payoneer has fair charges as compared to paypal.</br> -->
+                  <b>Payoneer account email:</b><a href="payments"> virtualwriterkings@gmail.com</a> 
                 
               </p>
               <button type="button" class="btn btn-primary btn-lg"><a href="/orders/"><span style="color: white",>Order Now!</span></a></button>
@@ -551,15 +613,216 @@ site-slider.slider-btn.next{
               <p class="text-black-50">CEO at Google</p> -->
             </div>
           </div>
-    </div>
+        </div>
   </div>
 </section>
 </main>
 <br>
 <br>
+
+<div class="container my-5 p-5 z-depth-1">
+
+
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+
+    <!-- Section heading -->
+    <h2 class="text-center font-weight-bold mb-4 pb-2">Secret to Customers' Loyalty</h2>
+    <!-- Section description -->
+    <p class="text-center lead grey-text mx-auto mb-5">Our Competitors Fail to Undertand How We Mantain Customers. With Quality Services How Can One Leave?</p>
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4">
+
+        <!-- Grid row -->
+        <div class="row mb-3">
+
+          <!-- Grid column -->
+          <div class="col-2">
+            <i class="fas fa-calendar-alt"style="font-size:48px;color:pink"></i>
+            
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-10">
+            <h5 class="font-weight-bold mb-3">Deadline is Part of the Assignent</h5>
+            <p class="grey-text">We cover all subjects present.Yours is to set deadline at your convinience after which our team will take postion to give quality original paper in time.</p>
+           
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row mb-3">
+
+          <!-- Grid column -->
+          <div class="col-2">
+            <i class="fas fa-address-card" style="font-size:48px;color:blue"></i>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-10">
+            <h5 class="font-weight-bold mb-3">Detailed Writers Profile</h5>
+            <p class="grey-text">We give honsety tutors' details depending on their proficiency. In some occassion we guide customers in hiring highly skilled personnel.</p>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row mb-md-0 mb-3">
+
+          <!-- Grid column -->
+          <div class="col-2">
+            <i class="fa fa-phone" style="font-size:48px;color:green"></i>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-10">
+            <h5 class="font-weight-bold mb-3">Contact</h5>
+            <p class="grey-text mb-md-0">We give the best communication platforms ever. we allow live chats, whatsapp chats, emails and even telephone calls where need be. Thats why we are number one service provider and we will ever remain to be your choice number one</p>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 text-center">
+        <div class="zoom-in">
+        <img class="img-fluid" data-aos="fade-left" data-aos-delay="400"  src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" 
+          alt="Sample image">
+        </div>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4">
+
+        <!-- Grid row -->
+        <div class="row mb-3">
+
+          <!-- Grid column -->
+          <div class="col-2">
+            <i class="fas fa-edit" style="font-size:48px;color: cyan"></i>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-10">
+            <h5 class="font-weight-bold mb-3">Edits Any Time at Will</h5>
+            <p class="grey-text">We allow addtional of information with zero charges. feel free to correct your order if necessary.</p>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row mb-3">
+
+          <!-- Grid column -->
+          <div class="col-2">
+            <i class="fab fa-sistrix"style="font-size: 48; color:purple"></i>
+            </div>
+
+          <!-- Grid column -->
+          <div class="col-10">
+            <h5 class="font-weight-bold mb-3">Plagiarism Report</h5>
+            <p class="grey-text">We double check all assignments similarity indexes before forwading to our customers. Any paper uploaded to a customer MUST have less than 0% plagiarism index. </p>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-2">
+            <i class="fas fa-dollar-sign" style="font-size: 48; color:gold"></i>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-10">
+            <h5 class="font-weight-bold mb-3">Affordable Prices</h5>
+            <p class="grey-text mb-0">We offer lowest prces per page of up to $5 per page. Also, we allow addtional discounts of approximately 40%. For discounts terms and condtions apply. </p>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </section>
+  <!--Section: Content-->
+
+
+</div>
+
+<div class="card bg-green text-white">
+  <img src="{% static 'images/quality.jpg'%}" class="img-fluid border-radius p-4" alt="">
+  <div class="card-img-overlay">
+    <p class="text-center"><b style="font-size: 24px;">We Also Offer Free Incentives Like; </b></p>
+    <div class="text-center">
+    <ul>
+      <li><i class="fa fa-check-circle" style="font-size:15px;color:purple"></i><b style="color: green;">FREE</b> Plagiarism Report</li>
+      <br>
+      <li><i class="fa fa-check-circle" style="font-size:15px;color:purple"></i><b style="color: green;">FREE</b> Special Discounts</li>
+     <br>
+      <li><i class="fa fa-check-circle" style="font-size:15px;color:purple"></i><b style="color: green;">FREE</b> Best Writers Ever</li>
+      <br>
+      <li><i class="fa fa-check-circle" style="font-size:15px;color:purple"></i><b style="color: green;">FREE</b> Quality Title Page</li>
+      <br>
+      <li><i class="fa fa-check-circle" style="font: size 15;px;color:purple"></i><b style="color: green;">FREE</b> Referencing Styles</li>
+      <br>
+      <li><i class="fa fa-check-circle" style="font-size:15px;color:purple"></i><b style="color: green;">FREE</b> All Formating Styes</li>
+      <br>
+      
+   </ul></p>
+  </div>
+    
+   
+    <!-- <p class="text-center"><b style="font-size: 24px;">Services Offered</b></p>
+    <p class="text-center"data-aos="fade-left" data-aos-delay="100"><span style="color: whitesmoke;">Technical Calculations</span></p> 
+    <p class="text-center"data-aos="fade-left" data-aos-delay="200"><span style="color: whitesmoke;">Software Developement</span></p> 
+    <p class="text-center"data-aos="fade-left" data-aos-delay="300"><span style="color: whitesmoke;">Database Management</span></p> 
+    <p class="text-center"data-aos="fade-left" data-aos-delay="400"><span style="color: whitesmoke;">Computer Programming</span></p> 
+    <p class="text-center"data-aos="fade-left" data-aos-delay="500"><span style="color: whitesmoke;">Entire Online Classes</span></p> 
+    <p class="text-center"data-aos="fade-left" data-aos-delay="600"><span style="color: whitesmoke;">All Field Thesis Writing</span></p> 
+    <p class="text-center"data-aos="fade-left" data-aos-delay="700"><span style="color: whitesmoke;">Web Designing</span></p> 
+    <p class="text-center"data-aos="fade-left" data-aos-delay="800"><span style="color: whitesmoke;">Among Many Others</span></p> 
+    
+    
+     
+     
+      -->
+   
+    
+  </div>
+</div>
 <!--  ========================= About Area ==========================  -->
 
-<section class="about-area">
+<!-- <section class="about-area">
   <div class="container-fluid">
       <div class="row">
           <div class="col-lg-6 col-md-12">
@@ -595,7 +858,7 @@ site-slider.slider-btn.next{
           </div>
       </div>
   </div>
-</section>
+</section> -->
 
 <!--  ========================= End About Area ==========================  -->
 <!-- yyyy -->
@@ -626,6 +889,7 @@ site-slider.slider-btn.next{
   </div>
   </div>
 <!-- Management Team -->
+<div class="container">
 <div class="container-fluid padding">
 <div class="row welcome text-center">
   <div class="col-12">
@@ -666,7 +930,7 @@ site-slider.slider-btn.next{
                 <div class="card mr-2 d-inline-block shadow">
                   <div class="card-img-top"data-aos="zoom-in" data-aos-delay="200">
                     <div class="zoomin">
-                    <img class="card-imd-top" src="{% static 'images/work1.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+                    <img class="card-imd-top" src="{% static 'images/kt.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
                      </div>
                   </div>
                   <div class="card-body"data-aos="fade-left" data-aos-delay="200">
@@ -674,7 +938,7 @@ site-slider.slider-btn.next{
                     <p class="card-text"data-aos="fade-left" data-aos-delay="200">
                       <p class="text-black-50" data-aos="fade-left" data-aos-delay="200">Secretary</p>
                     </p>
-                   <p>7 Years Tutor, The University of Newcastle </p>
+                   <p>Chief Tutor, The University of Newcastle Enjoying 7 Yers of Experience</p>
                    <button type="button" class="btn btn-primary btn-lg"><a href= "/accounts/kate/"><span style="color: white",>View More</span></a></button>
                   </div>
                 </div>
@@ -683,7 +947,7 @@ site-slider.slider-btn.next{
                 <div class="card  d-inline-block mr-2 shadow">
                   <div class="card-img-top"data-aos="fade-left" data-aos-delay="200">
                     <div class="zoomin">
-                        <img class="card-imd-top" src="{% static 'images/omuga.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+                        <img class="card-imd-top" src="{% static 'images/zephy5.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
                     
                       </div>
                   <div class="card-body"data-aos="zoom-in" data-aos-delay="200">
@@ -704,7 +968,7 @@ site-slider.slider-btn.next{
         <div class="card mr-2 d-inline-block shadow-lg">
             <div class="card-img-top"data-aos="fade-left" data-aos-delay="200">
               <div class="zoomin">
-              <img class="card-imd-top" src="{% static 'images/iso1.jpg' %}" class="img-fluid border-radius p-4" alt="" >
+              <img class="card-imd-top" src="{% static 'images/i.jpg' %}" class="img-fluid border-radius p-4" alt="" >
             </div>
             </div>
             <div class="card-body"data-aos="fade-left" data-aos-delay="200">
@@ -717,6 +981,7 @@ site-slider.slider-btn.next{
               <button type="button" class="btn btn-primary btn-lg"><a href= "/accounts/isaiah/"><span style="color: white",>View</span></a></button>
             </div>
           </div>
+        </div>
     </div>
   </div>
 </section>
@@ -788,41 +1053,58 @@ site-slider.slider-btn.next{
 </div>
   </div>
   </section>
+
   <section class="section-4"data-aos="fade-right" data-aos-delay="200">
   <div class="container text-center">
     <h1 class="text-dark"data-aos="fade-right" data-aos-delay="200">Reviews and Coments From Our Customers</h1>
   </div>
   <!--Carousel Wrapper-->
-<div class="container">
-  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+<!-- <div class="container mt-5">
 
-  <!--Controls-->
-  <div class="center">
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-long-arrow-alt-left" style="font-size: 30px;"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-long-arrow-alt-right" style="font-size: 30px;"></i></a>
-  </div>
-</div>
-  <!--/.Controls-->
 
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-    <li data-target="#multi-item-example" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
+  Section: Content-->
+  <div class="container">
+      <section class="team-section text-center dark-grey-text">
 
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
+    <!-- Section heading -->
+    <h2 class="font-weight-bold mb-4">Testimonials</h2>
 
-    <!--First slide-->
-    <div class="carousel-item active">
+  	<!-- Grid row -->
+    <div class="row">
+
+      <!--Carousel Wrapper-->
+      <div id="multi-item-example" class="carousel testimonial-carousel slide carousel-multi-item mb-5" data-ride="carousel">
+
+        <!--Controls-->
+        <div class="controls-top">
+          <a class="btn-floating light-blue darken-4" href="#multi-item-example" data-slide="prev"><i class="fas fa-long-arrow-alt-left" style="font-size: 30px;"></i></a>
+          <a class="btn-floating light-blue darken-4" href="#multi-item-example" data-slide="next"><i class="fas fa-long-arrow-alt-right" style="font-size: 30px;"></i></a>
+        </div>
+        <!--Controls-->
+
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#multi-item-example" data-slide-to="0" class="active light-blue darken-4"></li>
+          <li data-target="#multi-item-example" data-slide-to="1" class="light-blue darken-4"></li>
+          <li data-target="#multi-item-example" data-slide-to="2" class="light-blue darken-4"></li>
+        </ol>
+        <!--Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+          <!--First slide-->
+          <div class="carousel-item active">
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
+          <!--Avatar-->
+          
           <div class="zoomout">
-          <img  src="{% static 'images/aldrie.jpg'%}" class="avatar" alt="Card image cap">
+
+          <div class="avatar mx-auto">
+            <img  src="{% static 'images/aldrie.jpg'%}" class="rounded-circle z-depth-1 img-fluid" style="height: 150px; width: 150px;">
+          </div>  
        
         
           <div class="card-body"data-aos="fade-right" data-aos-delay="200">
@@ -842,9 +1124,9 @@ site-slider.slider-btn.next{
       </div>
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/e.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/e.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
 
           <div class="card-body"data-aos="fade-right" data-aos-delay="200">
             <h4 class="card-title"data-aos="fade-right" data-aos-delay="200">Kingsley</h4>
@@ -862,9 +1144,9 @@ site-slider.slider-btn.next{
       </div>
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/w5.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/w5.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
           </div>
           <div class="card-body">
             <h4 class="card-title"data-aos="fade-right" data-aos-delay="200">Eagle Eye</h4>
@@ -873,9 +1155,7 @@ site-slider.slider-btn.next{
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <br>
-                    <br>
-                    <br>
+           
             <p class="card-text"data-aos="fade-left" data-aos-delay="200">Virtual Writer Kings did a wonderful job, very well written paper, followed instructions, and delivered on time.</p>
             <!-- <a class="btn btn-primary">Button</a> -->
           </div>
@@ -889,9 +1169,9 @@ site-slider.slider-btn.next{
     <div class="carousel-item">
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/w1.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/w1.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
           </div>
           <div class="card-body"data-aos="fade-right" data-aos-delay="200">
             <h4 class="card-title"data-aos="fade-right" data-aos-delay="200">Zin Bin Zin </h4>
@@ -907,9 +1187,9 @@ site-slider.slider-btn.next{
       </div>
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/k.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/k.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
           </div>
           <div class="card-body"data-aos="fade-right" data-aos-delay="200">
             <h4 class="card-title"data-aos="fade-right" data-aos-delay="200">Benjamin Edwards</h4>
@@ -918,9 +1198,7 @@ site-slider.slider-btn.next{
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star "></span>
-            <br>
-                    <br>
-                    <br>
+          
             <p class="card-text"data-aos="fade-right" data-aos-delay="200">The paper was not badly done. The writer need to improve in paragraphing</p>
             <!-- <a class="btn btn-primary">Button</a> -->
           </div>
@@ -928,9 +1206,9 @@ site-slider.slider-btn.next{
       </div>
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/m.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/m.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
           </div>
           <div class="card-body"data-aos="fade-right" data-aos-delay="200">
             <h4 class="card-title"data-aos="fade-right" data-aos-delay="200">Chisung Shing</h4>
@@ -939,8 +1217,7 @@ site-slider.slider-btn.next{
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <br>
-                    <br>
+           
                     
             <p class="card-text"data-aos="fade-right" data-aos-delay="200"> Woow!! I never expected an "A" in economics and finance. It is through virtual writer kings that happened. Keep it up!</p>
             <!-- <a class="btn btn-primary">Button</a> -->
@@ -955,9 +1232,9 @@ site-slider.slider-btn.next{
     
     <div class="carousel-item">
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/w2.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/w2.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
           </div>
           <div class="card-body">
             <h4 class="card-title"data-aos="fade-left" data-aos-delay="200">Lilday Meshack</h4>
@@ -966,19 +1243,18 @@ site-slider.slider-btn.next{
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <br>
-                    <br>
-                    
-            <p class="card-text"data-aos="fade-right" data-aos-delay="200"Amazing!! This is a site to trust. the services recieved are beyond satisfaction. I will recomend you forever</p>
+      
+                  
+            <p class="card-text"data-aos="fade-right" data-aos-delay="200">Amazing!! This is a site to trust. the services recieved are beyond satisfaction. I will recomend you forever</p>
            
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/w4.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/w4.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
           </div>
           <div class="card-body"data-aos="fade-right" data-aos-delay="200">
             <h4 class="card-title"data-aos="fade-right" data-aos-delay="200">Dr Tina</h4>
@@ -994,9 +1270,9 @@ site-slider.slider-btn.next{
       </div>
 
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card mb-4 border-0">
           <div class="zoomout">
-          <img  src="{% static 'images/l.jpg'%}" class="avatar" alt="Card image cap">
+          <img  src="{% static 'images/l.jpg'%}" class="avatar" alt="Card image cap" style="height: 150px; width: 150px;">
           </div>
           <div class="card-body"data-aos="fade-right" data-aos-delay="200">
             <h4 class="card-title"data-aos="fade-right" data-aos-delay="200">Wine Dings</h4>
@@ -1005,9 +1281,7 @@ site-slider.slider-btn.next{
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <br>
-                    <br>
-                    <br>
+            
                   
             <p class="card-text"data-aos="fade-right" data-aos-delay="200">An amazing work, all the directives were keenly followed until I couldn't ask for anything better. Thank you.</p>
             <!-- <a class="btn btn-primary">Button</a> -->
@@ -1022,12 +1296,99 @@ site-slider.slider-btn.next{
   <!--/.Slides-->
 
 </div>
+<div>
 <!--/.Carousel Wrapper-->
+
+<!-- <div class="container my-5 z-depth-1"> -->
+
+
+  <!--Section: Content-->
+  <!-- <section class="dark-grey-text">
+
+    <div class="row pr-lg-5">
+      <div class="col-md-7 mb-4">
+
+        <div class="view">
+          <img  src="{% static 'images/graduates.png'%}" class="img-fluid" alt="" style="width: 100%;">
+        </div>
+
+      </div>
+      <div class="col-md-5 d-flex align-items-center">
+        <div>
+          
+          <h3 class="font-weight-bold mb-4">Good Moments</h3>
+
+          <p>Virtual Writer Kings allows you to factor out on how to create a great graduation event by thinking about dress code, speakers, awards, entertainment, refreshments, and streaming. It's part of our series on live streaming events.
+            It’s that time of year again: colleges, high schools, junior highs, elementary schools and pre-schools are gearing up for their graduation ceremonies.
+            These ceremonies, though entirely symbolic, are often included in the list of people’s most important life momeries </p>
   
+          
+        </div>
+      </div>
+    </div>
+
+  </section> -->
+
+
+  <div class="row align-items-center">
+
+    <div class="col-lg-6 mb-4">
+      <h2 class="font-weight-normal mb-4">We Build Amazing Moments for Our Customers.</h2>
+      <p class="lead text-muted">Virtual Writer Kings allows you to factor out on how to create a great graduation event by thinking about dress code, speakers, awards, entertainment and even refreshments</p>
+      <p class="text-muted">Out team members combine efforts to ensure quality standards have been archieved. And best of all, we
+        are super passionate
+        about our work. Our Pride is Our Customers' Sucess</p>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+
+      <div id="mdb-lightbox-ui"></div>
+
+      <div class="d-grid mdb-lightbox">
+        <figure class="item">
+          <a href="{% static 'images/z.jpg'%}" class="img-fluid" alt="" style="width: 100%;"
+            class="z-depth-1 rounded" data-size="1600x1067">
+            <img  src="{% static 'images/z.jpg'%}" class="img-fluid" alt="" style="width: 100%;">
+          </a>
+        </figure>
+        <figure class="item">
+          <a href="{% static 'images/x.jpg'%}" class="img-fluid" alt="" style="width: 100%;"
+            class="z-depth-1 rounded" data-size="1600x1067">
+            <img  src="{% static 'images/x.jpg'%}" class="img-fluid" alt="" style="width: 100%;">
+          </a>
+        </figure>
+        <figure class="item">
+          <a href="{% static 'images/graduates.png'%}" class="img-fluid" alt="" style="width: 100%;"
+            class="z-depth-1 rounded" data-size="1600x1067">
+            <img src="{% static 'images/graduates.png'%}" class="img-fluid" alt="" style="width: 100%;">
+          </a>
+        </figure>
+        <figure class="item">
+          <a href="{% static 'images/b.jpg'%}" class="img-fluid" alt="" style="width: 100%;">
+            
+            <img  src="{% static 'images/b.jpg'%}" class="img-fluid" alt="" style="width: 100%;"class="z-depth-1 rounded" data-size="1600x1067">
+          </a>
+        </figure>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!--Section: Content-->
+
+
+</div>
+  <!--Section: Content-->
+
+
+
+     
   <!-- Graduation Moments-->
-<div class="container"data-aos="flip-up" data-aos-delay="100">
+<!-- <div class="container"data-aos="flip-up" data-aos-delay="100"> -->
   <!-- <div class="row text-center padding"> -->
-    <div class="col-md-12 col-lg-6">
+    <!-- <div class="col-md-12 col-lg-6">
       <h1 style="color: blue;">Good Moments Ever</h1>
       
       <p>Virtual Writer Kings allows you to factor out on how to create a great graduation event by thinking about dress code, speakers, awards, entertainment, refreshments, and streaming. It's part of our series on live streaming events.
@@ -1035,11 +1396,11 @@ site-slider.slider-btn.next{
         These ceremonies, though entirely symbolic, are often included in the list of people’s most important life moments. They celebrate the culmination of tireless work, late nights, some failures, more successes, and individual growth.
         That means that as an organizer or a host of a graduation ceremony, there's a lot riding on your shoulders. Below are certain things you should consider to ensure your graduation ceremony is flawless.</P>
 
-      <br>
+      <br> -->
     <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
 
     
-    </div>
+    <!-- </div>
     <div class="positioning">
     <div class="col-md-12 col-lg-6"data-aos="zoom-in" data-aos-delay="200" >
        <div class="zoomin">
@@ -1053,7 +1414,7 @@ site-slider.slider-btn.next{
 </div>
     
   </div>
-</div>
+</div> -->
 
 <!-- <main>
   <section class="section-1">
@@ -1078,7 +1439,53 @@ site-slider.slider-btn.next{
     </div>
   </section> -->
 
-  <section class="section-3 container-fluid p-0 text-center">
+   <!--Section: Content-->
+   <section>
+
+    <!-- Grid row -->
+    <div class="container">
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-lg-5 mb-4">
+
+				<!-- Featured image -->
+        <div class="view overlay mb-4">
+          <img  src="{% static 'images/s10.jpg'%}" class="img-fluid" alt="" style="width: 100%;" style="padding-left: 30px;" alt="Sample image">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-7 mb-4 align-self-center text-center text-lg-left">
+
+        <h2 class="h2 mb-4">Now Available</h2>
+        <p class="text-muted mb-4">Virtual Writer Kings app is available for androind and windows. If interested feel free to download one.</p>
+
+        <button type="button" class="btn btn-outline-dark waves-effect btn-md ml-lg-0"><i class="fab fa-apple fa-lg pr-1"></i> App Store</button>
+				<button type="button" class="btn btn-outline-dark waves-effect btn-md"><i class="fab fa-google-play fa-lg pr-1"></i> Google Play</button>
+        
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </section>
+  <!--Section: Content-->
+
+</div>
+</div>
+
+ 
+  
+
+  <!-- <section class="section-3 container-fluid p-0 text-center">
     <div class="row"data-aos="fade-left" data-aos-delay="200">
       <div class="col-md-12 col-sm-12">
         <h1>Download virtual Writer Kings App for all Platform</h1>
@@ -1111,19 +1518,30 @@ site-slider.slider-btn.next{
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="class">
+  <div class="container">
+
+    <section id="confidence">
+      <div class= "container"data-aos="fade-left" data-aos-delay="400">
+        <h1 style="font-family: Lucida Calligraphy;">Virtual Writer Kings<br>Instills <br> Confidence to all Learners</h1>
+          
+      </div>
+      </div>
+      </section>   
+      
+
+  <!-- <section id="class">
     <div class= "container"data-aos="fade-left" data-aos-delay="400">
       <h1>The King <br>of<br> Online Studies Jungle</h1>
         
      
     </div>
-    </section>
+    </section> -->
 <!-- why always us -->
     <section id="Terms"data-aos="fade-left" data-aos-delay="200">
       <div class= "container"data-aos="fade-left" data-aos-delay="200">
-      <h1 style="text-align: center";>Why Always Virtual Writer Kings</h1>
+        <h2 style="text-align: center;">Dear Customer, You MUst Know This</h2></b>
    </p>Any deadlines coming up, last-minute papers due, or have trivial tasks that the teacher assigned you? Never worry about any of these issues again! We offer the best essay service that will meet all your deadlines for any task. Our professionals are ready to complete your order and send it to you whenever you request it. Here are the top reasons why you should hire a writer from Virtual Writer Kings:</p>
    <ol>
    <li>We employ only professionals who hold higher education diplomas with years of writing experience.</li>
@@ -1143,50 +1561,211 @@ site-slider.slider-btn.next{
   
      
       <!-- What we offer  -->
-      <div class="container">
+      <!-- <div class="container">
             <aside class="sidebar">
                 <div class="category">
                     <h2>Our Services</h2>
                     <ul class="category-list">
                         <li class="list-items" data-aos="fade-left" data-aos-delay="100">
                             <a href="#">Software Developement</a>
-                            <!-- <span>(05)</span> -->
-                        </li>
+                            <span>(05)</span> -->
+                        <!-- </li>
                         <li class="list-items" data-aos="fade-left" data-aos-delay="200">
-                            <a href="#">Database Management</a>
+                            <a href="#">Database Management</a> -->
                             <!-- <span>(02)</span> -->
-                        </li>
-                        <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                            <a href="#">Statistical Analysis</a>
+                        <!-- </li> -->
+                        <!-- <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                            <a href="#">Statistical Analysis</a> -->
                             <!-- <span>(07)</span> -->
-                        </li>
+                        <!-- </li>
                         <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                            <a href="#">Web Desining</a>
+                            <a href="#">Web Desining</a> -->
                             <!-- <span>(01)</span> -->
-                        </li>
+                        <!-- </li>
                         <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                          <a href="#">Thesis Writing</a>
+                          <a href="#">Thesis Writing</a> -->
                           <!-- <span>(07)</span> -->
-                      </li>
+                      <!-- </li>
                       <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                        <a href="#">Online Tutoring</a>
+                        <a href="#">Online Tutoring</a> -->
                         <!-- <span>(07)</span> -->
-                    </li>
+                    <!-- </li>
                         <li class="list-items" data-aos="fade-left" data-aos-delay="500">
-                            <a href="#">Essays</a>
+                            <a href="#">Essays</a> -->
                             <!-- <span>(08)</span> -->
-                        </li>
+                        <!-- </li>
                     </ul>
                 </div>
-              </div>
+              </div>  -->
                 
-              <section id="confidence">
-                <div class= "container"data-aos="fade-left" data-aos-delay="400">
-                  <h1 style="font-family: Lucida Calligraphy;">Virtual Writer Kings<br>Instills <br> Confidence to all Learners</h1>
+              <div class="container">
+                <h2 class="text-center"><span>Reach Our Team For</span></h2>
+                <div class="why">
+                <aside class="sidebar">
+                <div class="category">
                     
-                 
+              </div>
+                    <ul class="category-list">
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Thesis Writing</h3></span></a></button>
+                            <!-- <span>(01)</span> -->
+                            <br>
+                            <br>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                                <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Computer Programming</h3></span></a></button>
+                                <!-- <span>(02)</span> -->
+                            </li>
+                            <br>
+                        </li>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Essays</h3></span></a></button>
+                            <!-- <span>(02)</span> -->
+                        </li>
+                        <br>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Statistical Analysis </h3></span></a></button>
+                            <!-- <span>(03)</span> -->
+                        </li>
+                        <br>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Web Desining</h3></span></a></button>
+                            <!-- <span>(04)</span> -->
+                        </li>
+                        <br>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="600">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Technical calculations </h3></span></a></button>
+                            <!-- <span>(5)</span> -->
+        
+                        </li>
+                        <br>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="700">
+                            
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Online Classes</h3></span></a></button>
+                        </li>
+                        <br>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="800">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Database Management </h3></span></a></button>
+                            <!-- <span>(5)</span> -->
+                        
+                        </li>
+                        <br>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="900">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3>Software Engineering </h3></span></a></button>
+                            <!-- <span>(5)</span> -->
+                        </li>
+                            <br>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="900">
+                            <button type="button" class="btn btn-success"><a href="#"><span style="color: aliceblue;",><h3> And Many More Fields </h3></span></a></button>
+                            <!-- <span>(5)</span> -->
+        
+        
+                        </li>
+                    </ul>
+                </aside>
                 </div>
-                </section>   
-                
+              </div>
+<!-- Friquently asked Questions -->
+
+<div class="container my-5">
+
+
+  <!--Section: Content-->
+  <section>
+
+    <h6 class="font-weight-normal text-uppercase font-small grey-text mb-4 text-center">FAQ</h6>
+    <!-- Section heading -->
+    <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">Frequently Asked Questions</h3>
+    <hr class="w-header">
+    <!-- Section description -->
+    <p class="lead text-muted mx-auto mt-4 pt-2 mb-5 text-center">Got a question? We've got answers. If you have some other questions, see our support center.</p>
+
+		<div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3">Is this a secure site for purchases?</h5>
+        <p class="text-muted">Absolutely! We work with top payment companies which guarantees your safety and security. All billing information is stored on our payment processing partner which has the most stringent level of certification available in the payments industry.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3">Can I cancel my subscription?</h5>
+        <p class="text-muted">You can cancel your subscription anytime in your account. Once the subscription is cancelled, you will not be charged next month. You will continue to have access to your account until your current subscription expires.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3">How long are your contracts?</h5>
+        <p class="text-muted">Currently, we only offer monthly subscription. You can upgrade or cancel your monthly account at any time with no further obligation.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3">Can I update my card details?</h5>
+        <p class="text-muted">Yes. Go to the billing section of your dashboard and update your payment information.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3">Can I request refund?</h5>
+        <p class="text-muted">Unfortunately, not. We do not issue full or partial refunds for any reason.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3">Can I try your service for free?</h5>
+        <p class="text-muted">Of course! We’re happy to offer a free plan to anyone who wants to try our service.</p>
+      </div>
+    </div>
+
+	</section>
+  
+</div>
+<!-- End of FAQ -->
+              <div class="container my-5 py-5 z-depth-1">
+
+
+                <!--Section: Content-->
+                <section class="px-md-5 mx-md-5 text-center dark-grey-text">
+            
+                  <!--Grid row-->
+                  <div class="row">
+            
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 mb-md-0">
+            
+                      <h3 class="font-weight-bold">We are The King</h3>
+            
+                      <p class="text-muted">Virtual Writer Kings is the king of the Online Academic Jungle.<br> <h1><i style="color: green;"><span style="font-family: Lucida Calligraphy;">Welcome Always</span></i> </h1></p>
+            
+                      <a class="btn btn-purple btn-md ml-0" href="#" role="button">Order Now<i class="fa fa-gem ml-2"></i></a>
+            
+                      <hr class="my-5">
+            
+                      <p class="font-weight-bold">Follow us on:</p>
+            
+                      <!--Facebook-->
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-twitter"></i></a>
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-pinterest"></i></a>
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-youtube"></i></a>
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-github"></i></a>
+                      <a href="#" class="mx-1" role="button"><i class="fab fa-stack-overflow"></i></a>
+            
+                    </div>
+                    <!--Grid column-->
+            
+                    <!--Grid column-->
+                    <div class="col-md-5 mb-4 mb-md-0">
+            
+                      <img  src="{% static 'images/king.jpg'%}" class="img-fluid" alt="">
+            
+                    </div>
+                    <!--Grid column-->
+            
+                  </div>
+                  <!--Grid row-->
+            
+            
+                </section>
+                <!--Section: Content-->
+            
+            
+              </div>
            
 {% endblock content %}
